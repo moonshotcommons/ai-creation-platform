@@ -8,7 +8,7 @@ import { getOffchainAuthKeys } from '@/utils/offchainAuth';
 import { ReedSolomon } from '@bnb-chain/reed-solomon';
 
 const rs = new ReedSolomon();
-const BUCKET_NAME = 'ai-socia-demo';
+const BUCKET_NAME = 'ai-creation-platform-demo';
 
 export default function Generate() {
   const { address, isConnected, connector } = useAccount();
@@ -67,7 +67,7 @@ export default function Generate() {
         creator: address,
         primarySpAddress: spInfo.primarySpAddress,
         visibility: VisibilityType.VISIBILITY_TYPE_PUBLIC_READ,
-        chargedReadQuota: Long.fromString('0'),
+        chargedReadQuota: Long.fromString('1'),
         paymentAddress: address,
       });
 
